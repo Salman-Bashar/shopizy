@@ -14,5 +14,6 @@ app.use(express.urlencoded({ extended: false }))
 app.listen(port, host, () => {
   log.info(`Server is running at http://${host}:${port}`)
 
+  log.info("Connecting to database...")
   connect()
 })

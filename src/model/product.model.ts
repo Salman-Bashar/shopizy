@@ -17,9 +17,8 @@ const ProductSchema = new mongoose.Schema({
     unique: true,
   },
   brand: {
-    type: String,
-    required: true,
-    unique: true,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Brand",
   },
   category: {
     type: String,

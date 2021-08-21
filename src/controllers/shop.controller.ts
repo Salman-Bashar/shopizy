@@ -6,7 +6,7 @@ import {
   findShop,
   updateShop,
   deleteShop,
-} from "../service/shop.service"
+} from "../services/shop.service"
 
 //Create a new shop
 export async function createShopHandler(req: Request, res: Response) {

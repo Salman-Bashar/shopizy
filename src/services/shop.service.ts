@@ -4,7 +4,7 @@ import {
   UpdateQuery,
   QueryOptions,
 } from "mongoose"
-import Shop, { ShopDocument } from "../model/shop.model"
+import Shop, { ShopDocument } from "../models/shop.model"
 
 //Create new shop information
 export function createShop(input: DocumentDefinition<ShopDocument>) {

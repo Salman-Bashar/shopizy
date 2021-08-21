@@ -4,7 +4,7 @@ import {
   UpdateQuery,
   QueryOptions,
 } from "mongoose"
-import Brand, { BrandDocument } from "../model/brand.model"
+import Brand, { BrandDocument } from "../models/brand.model"
 
 //Create a new brand
 export function createBrand(input: DocumentDefinition<BrandDocument>) {

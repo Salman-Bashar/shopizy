@@ -6,7 +6,7 @@ import {
   findEmployee,
   updateEmployee,
   deleteEmployee,
-} from "../service/employee.service"
+} from "../services/employee.service"
 
 //Add new employee information
 export async function createEmployeeHandler(req: Request, res: Response) {

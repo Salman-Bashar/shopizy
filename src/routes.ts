@@ -5,26 +5,26 @@ import {
   getShopHandler,
   updateShopHandler,
   deleteShopHandler,
-} from "./controller/shop.controller"
+} from "./controllers/shop.controller"
 import {
   createProductHandler,
   getProductsHandler,
   getProductHandler,
   updateProductHandler,
   deleteProductHandler,
-} from "./controller/product.controller"
+} from "./controllers/product.controller"
 import {
   createEmployeeHandler,
   getEmployeesHandler,
   getEmployeeHandler,
   updateEmployeeHandler,
   deleteEmployeeHandler,
-} from "./controller/employee.controller"
+} from "./controllers/employee.controller"
 import {
   createBrandHandler,
   updateBrandHandler,
   deleteBrandHandler,
-} from "./controller/brand.controller"
+} from "./controllers/brand.controller"
 
 export default function (app: Express) {
   //Landing Page Route

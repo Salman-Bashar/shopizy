@@ -4,7 +4,7 @@ import {
   UpdateQuery,
   QueryOptions,
 } from "mongoose"
-import Employee, { EmployeeDocument } from "../model/employee.model"
+import Employee, { EmployeeDocument } from "../models/employee.model"
 
 //Create new employee information
 export function createEmployee(input: DocumentDefinition<EmployeeDocument>) {

@@ -1,6 +1,10 @@
 import { Request, Response } from "express"
 import { get } from "lodash"
-import { createBrand, updateBrand, deleteBrand } from "../service/brand.service"
+import {
+  createBrand,
+  updateBrand,
+  deleteBrand,
+} from "../services/brand.service"
 
 //Create a new brand
 export async function createBrandHandler(req: Request, res: Response) {

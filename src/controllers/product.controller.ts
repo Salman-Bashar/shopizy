@@ -6,15 +6,18 @@ import {
   findProduct,
   updateProduct,
   deleteProduct,
-} from "../service/product.service"
+} from "../services/product.service"
 
-//Create a new product
+//Create a new product  =>  /api/products
 export async function createProductHandler(req: Request, res: Response) {
   const body = req.body
 
   const product = await createProduct({ ...body })
 
-  return res.send(200)
+  res.status(201).json({
+    success: true,
+    product,
+  })
 }
 
 //Get all products

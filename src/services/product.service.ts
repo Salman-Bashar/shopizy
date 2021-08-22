@@ -4,7 +4,7 @@ import {
   UpdateQuery,
   QueryOptions,
 } from "mongoose"
-import Product, { ProductDocument } from "../model/product.model"
+import Product, { ProductDocument } from "../models/product.model"
 
 //Create a new product
 export function createProduct(input: DocumentDefinition<ProductDocument>) {

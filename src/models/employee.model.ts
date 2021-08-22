@@ -20,15 +20,28 @@ const EmployeeSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-    default: true,
   },
   position: {
     type: String,
     required: true,
   },
   address: {
-    type: String,
-    required: true,
+    house: {
+      type: String,
+      required: true,
+    },
+    road: {
+      type: String,
+      required: true,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
+    division: {
+      type: String,
+      required: true,
+    },
   },
   contactNo: {
     type: String,

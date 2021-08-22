@@ -4,7 +4,9 @@ import { ProductDocument } from "./product.model"
 
 export interface ShopDocument extends mongoose.Document {
   name: string
+  shopId: string
   location: string
+  contactNo: string
 }
 
 const ShopSchema = new mongoose.Schema({
@@ -16,11 +18,20 @@ const ShopSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-    default: true,
   },
   location: {
-    type: String,
-    required: true,
+    road: {
+      type: String,
+      required: true,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
+    division: {
+      type: String,
+      required: true,
+    },
   },
   contactNo: {
     type: String,

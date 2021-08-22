@@ -1,21 +1,19 @@
-import dotenv from "dotenv"
 import mongoose from "mongoose"
 import log from "./logger"
 
-dotenv.config({ path: __dirname + "/../../.env" })
+async function connect() {
+  try {
+    const dbUri = process.env.DB_URI as string
 
-function connect() {
-  const dbUri = process.env.DB_URI as string
+    await mongoose.connect(dbUri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
 
-  return mongoose
-    .connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-      log.info("Database connected")
-    })
-    .catch((error) => {
-      log.error("Cannot connect to database", error)
-      process.exit(1)
-    })
+    log.info("Database connected")
+  } catch (err) {
+    log.error(err)
+  }
 }
 
 export default connect
